@@ -1,0 +1,141 @@
+/* div#pacManContainer{
+    background-color: teal;
+    width: 460px;
+    height: 460px;
+    border: 2px solid grey;
+} */
+div.pacManRow {
+    height: 20px;
+}
+div.pacManRow div{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+div.pacManBrick{
+    background-color:#808080;
+}
+div.pacManCoin{
+    background-image: url("img/coin.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+div.pacManCherry{
+    background-image: url("img/cherry.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+div.pacManEmpty{
+    display: none;
+}
+div#pacManPacman1{
+    background-image: url("img/pacman1_r.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+div#pacManR_ghost{
+    background-image: url("img/r_ghost_l.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+div.pacManStatus{
+    display:block;
+}
+    #pacMangameButton{
+        background-color: grey;
+        font-weight: bold;
+        margin-left: 180px;
+        margin-top: 10px;
+        position: absolute;
+        color:white;
+        border: 3px solid black;
+        border-radius: 2px;
+    }
+    .gameOver{
+        margin: 0px;
+        color: red;
+        font-weight: bold;
+        text-shadow: 1px 1px white;
+        visibility: hidden;
+    }
+div.pacManBoxes{
+    width: 96px;
+    height: 150px;
+    position: absolute;
+    display:block;
+}
+div#pacManBox1{
+    top: 1080px;
+    left: 70px;
+}
+div.pacManTitles{
+    width: 96px;
+    height: 26px;
+    display:block;
+    color:white;
+}
+div.pacManTitles p{
+    border: 1px solid white;
+    width: 39.5px;
+    height: 20px;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px;
+    font-size: 7pt;
+}
+div.pacManTracks{
+    width: 96px;
+    height: 26px;
+    display:block;
+    color:white;
+}
+div.pacManControls{
+    width: 94px;
+    height: 75px;
+    display:block;
+    color:white;
+    border: 1px solid white;
+}
+div.pacManControls p{
+    margin: 0px;
+    font-size:  8pt;
+    text-align: center;
+}
+div.pacManControls .controlhead{
+    background-color: orange;
+}
+div.pacManScores{
+    border: 1px solid white;
+    width: 39.5px;
+    height: 20px;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    background-color: grey;
+}
+div.pacManLifes{
+    border: 1px solid white;
+    width: 39.5px;
+    height: 20px;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    background-color: green;
+}
