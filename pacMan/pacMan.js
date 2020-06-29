@@ -92,8 +92,6 @@ $(document).ready(function(){
 
     function checkGhostCol(pacman, ghost){
         if (pacman.x == ghost.x & pacman.y == ghost.y){
-            // console.log(pacman.x + " & " + pacman.y);
-            // console.log(ghost.x + " & " + ghost.y);
             displayGhosts();
             displayPacman(pacman);
             if (pacman.life != 0){

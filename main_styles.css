@@ -74,12 +74,22 @@ body {
                 height: 72px;
                 display: block;
             }
+                .iconrows p{
+                    width: 250px;
+                    height: 68px;
+                    margin-left: 15px;
+                    display:inline-block;
+                    vertical-align: top;
+                    color: white;
+                }
                 .langIcons{
                     width: 68px;
                     height: 68px;
                     display:inline-block;
                     margin-left: 15px;
                     margin-top: 2px;
+                    position: relative;
+                    display: none;
                 }
     #aboutMe{
         width: 1120px;
@@ -145,4 +155,13 @@ body {
             width: 460px;
             height: 460px;
             border: 2px solid #181818;
+            display:inline-block;
+        }
+        #bodyTwoParagraph{
+            background-color: #202020;
+            width: 610px;
+            height: 460px;
+            border: 2px solid #181818;
+            display:inline-block;
+            vertical-align: top;
         }
