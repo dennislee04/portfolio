@@ -42,9 +42,25 @@ $(document).ready(function(){
         y: 50
     }
 
+    var y_ghost = {
+        name: "pacManY_ghost",
+        x: 13,
+        y: 40
+    }
+
+    var g_ghost = {
+        name: "pacManY_ghost",
+        x: 24,
+        y: 46
+    }
+
     function defaultR_ghost(){
         r_ghost.x = 14;
         r_ghost.y = 50;
+        y_ghost.x = 13;
+        y_ghost.y = 40;
+        g_ghost.x = 24;
+        g_ghost.y = 46;
     }
 
     function displayWorld(){
@@ -80,6 +96,10 @@ $(document).ready(function(){
     function displayGhosts(){
         document.getElementById('pacManR_ghost').style.top = r_ghost.y*20 + "px";
         document.getElementById('pacManR_ghost').style.left = r_ghost.x*20 + "px";
+        document.getElementById('pacManY_ghost').style.top = y_ghost.y*20 + "px";
+        document.getElementById('pacManY_ghost').style.left = y_ghost.x*20 + "px";
+        document.getElementById('pacManG_ghost').style.top = g_ghost.y*20 + "px";
+        document.getElementById('pacManG_ghost').style.left = g_ghost.x*20 + "px";
     }
 
     function displayScore(){
@@ -122,30 +142,34 @@ $(document).ready(function(){
 
     function moveGhost(ghost){
         var move = Math.trunc(((Math.random() * 4) + 1));
-            if (move == 1){ //Move UP
-                if(world[ghost.y-1-39][ghost.x-3] != 2){
-                    ghost.y--;
-                }
+        plusX = 3;
+        plusY = 39;
+        if (move == 1){ //Move UP
+            if(world[ghost.y-1-plusY][ghost.x-plusX] != 2){
+                ghost.y--;
             }
-            else if (move == 2){ //Move DOWN
-                if(world[ghost.y+1-39][ghost.x-3] != 2){
-                    ghost.y++;
-                }
+        }
+        else if (move == 2){ //Move DOWN
+            if(world[ghost.y+1-plusY][ghost.x-plusX] != 2){
+                ghost.y++;
             }
-            else if (move == 3){ //Move LEFT
-                if(world[ghost.y-39][ghost.x-1-3] != 2){
-                    ghost.x--;
-                }
+        }
+        else if (move == 3){ //Move LEFT
+            if(world[ghost.y-plusY][ghost.x-1-plusX] != 2){
+                ghost.x--;
             }
-            else if (move == 4){ //Move RIGHT
-                if(world[ghost.y-39][ghost.x+1-3] != 2){
-                    ghost.x++;
-                }
+        }
+        else if (move == 4){ //Move RIGHT
+            if(world[ghost.y-plusY][ghost.x+1-plusX] != 2){
+                ghost.x++;
             }
-            if (pacman1.life != 0){
-                checkGhostCol(pacman1, r_ghost);
-            }
-            displayGhosts();
+        }
+        if (pacman1.life != 0){
+            checkGhostCol(pacman1, r_ghost);
+            checkGhostCol(pacman1, g_ghost);
+            checkGhostCol(pacman1, y_ghost);
+        }
+        displayGhosts();
     }
 
     //this works to remove the object display
@@ -198,6 +222,8 @@ $(document).ready(function(){
                 }
                 displayPacman(pacman1);
                 checkGhostCol(pacman1, r_ghost);
+                checkGhostCol(pacman1, g_ghost);
+                checkGhostCol(pacman1, y_ghost);
             }
 
             displayScore();
@@ -234,11 +260,15 @@ $(document).ready(function(){
         defaultR_ghost();
         displayGhosts();
         ghost1 = setInterval( () =>{moveGhost(r_ghost);}, 400);
+        ghost2 = setInterval( () =>{moveGhost(y_ghost);}, 400);
+        ghost3 = setInterval( () =>{moveGhost(g_ghost);}, 400);
     });
 
     function gameOver(){
         gameStatus = "off";
         clearInterval(ghost1);
+        clearInterval(ghost2);
+        clearInterval(ghost3);
         document.getElementById("pacMangameButton").innerHTML = "Play Again?";
         document.getElementById('pacMangameButton').style.visibility = "visible";
     }
