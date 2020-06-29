@@ -113,6 +113,7 @@ body {
                     width: 320px;
                     text-shadow: 2px 2px black;
                 }
+
                 .columnsImage{
                     height: 200px;
                     width: 320px;
@@ -126,6 +127,9 @@ body {
                     text-shadow: 2px 2px black;
                     margin-left: 25px;
                 }
+                    .pContent a{
+                        text-decoration: none;
+                    }
     
     #bodyTwo{
         width: 1120px;
