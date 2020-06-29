@@ -41,14 +41,14 @@ body {
     #header h1{
         display: inline-block;
         color: white;
-        width: 145px;
+        width: 170px;
         height: 45px;
         margin-left: 70px;
         text-shadow: 2px 2px black;
     }
     #aboutLinks{
         display:inline-block;
-        padding-left: 150px;
+        padding-left: 125px;
     }
         .aboutURLs{
             margin-right: 30px;
