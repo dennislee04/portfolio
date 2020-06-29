@@ -2,6 +2,17 @@ $(document).ready(function(){
 
     var gameStatus = "off";
 
+    var soundChomp = document.getElementById("myAudioPac_chomp");
+    var soundFruit = document.getElementById("myAudioPac_fruit");
+    var soundDeath = document.getElementById("myAudioPac_death");
+
+    function defaultSound(){
+        soundChomp = document.getElementById("myAudioPac_chomp");
+        soundFruit = document.getElementById("myAudioPac_fruit");
+        soundDeath = document.getElementById("myAudioPac_death");
+
+    }
+
     var world =[
         [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
         [2,0,1,1,1,1,1,1,1,2,1,1,1,1,1,1,4,1,1,1,1,1,2],
@@ -114,6 +125,7 @@ $(document).ready(function(){
         if (pacman.x == ghost.x & pacman.y == ghost.y){
             displayGhosts();
             displayPacman(pacman);
+            soundDeath.play();
             if (pacman.life != 0){
                 pacman.life--;
                 alert("You've hit the Ghost and a lost PacMan Life. You'll now have " + pacman.life + " lives left. Are you ready?");
@@ -214,11 +226,12 @@ $(document).ready(function(){
                 if(world[pacman1.y-39][pacman1.x-3] == 1){
                     world[pacman1.y-39][pacman1.x-3] = 0;
                     pacman1.score += 10;
-
+                    soundChomp.play();
                 }
                 if(world[pacman1.y-39][pacman1.x-3] == 4){
                     world[pacman1.y-39][pacman1.x-3] = 0;
                     pacman1.score += 50;
+                    soundFruit.play();
                 }
                 displayPacman(pacman1);
                 checkGhostCol(pacman1, r_ghost);
@@ -251,6 +264,7 @@ $(document).ready(function(){
             [2,1,1,1,1,1,1,1,4,1,1,1,2,1,1,1,1,1,4,2,1,1,2],
             [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
         ];
+        defaultSound();
         displayWorld();
         defaultPacman1();
         document.getElementById(pacman1.gameover).style.visibility = "hidden";
