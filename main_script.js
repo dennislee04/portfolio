@@ -11,6 +11,6 @@ $(document).ready(function(){
         }, function() {
             $(this).siblings().slideToggle();
         }
-      );
+    );
 
 });

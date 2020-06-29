@@ -72,6 +72,20 @@ div#pacManBox1{
     top: 1080px;
     left: 70px;
 }
+div#pacManBox2{
+    top: 1080px;
+    left: 415px;
+}
+
+    div#pacManBox2 p{
+        margin: 0px;
+        background-color: #808080;
+        font-weight: bold;
+    }
+        div#pacManBox2 p img{
+            width: 20px;
+            height: 20px;
+        }
 div.pacManTitles{
     width: 96px;
     height: 26px;

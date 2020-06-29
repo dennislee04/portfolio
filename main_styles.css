@@ -61,6 +61,7 @@ body {
             width: 120px;
             height: 145px;
             display: inline-block;
+            border-radius: 50%;
         }
         #langBlock{
             display:inline-block;

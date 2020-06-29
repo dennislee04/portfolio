@@ -233,7 +233,7 @@ $(document).ready(function(){
         displayLife();
         defaultR_ghost();
         displayGhosts();
-        ghost1 = setInterval( () =>{moveGhost(r_ghost);}, 500);
+        ghost1 = setInterval( () =>{moveGhost(r_ghost);}, 400);
     });
 
     function gameOver(){
