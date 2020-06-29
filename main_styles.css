@@ -61,7 +61,7 @@ body {
             width: 120px;
             height: 145px;
             display: inline-block;
-            border-radius: 50%;
+            clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
         }
         #langBlock{
             display:inline-block;
