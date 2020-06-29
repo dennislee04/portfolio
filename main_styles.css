@@ -83,6 +83,10 @@ body {
                     vertical-align: top;
                     color: white;
                 }
+
+                .iconrows p span{
+                    color: red;
+                }
                 .langIcons{
                     width: 68px;
                     height: 68px;
