@@ -2,16 +2,11 @@ $(document).ready(function(){
 
     var gameStatus = "off";
 
+    var soundStart = document.getElementById("myAudioPac_start");
     var soundChomp = document.getElementById("myAudioPac_chomp");
     var soundFruit = document.getElementById("myAudioPac_fruit");
     var soundDeath = document.getElementById("myAudioPac_death");
-
-    function defaultSound(){
-        soundChomp = document.getElementById("myAudioPac_chomp");
-        soundFruit = document.getElementById("myAudioPac_fruit");
-        soundDeath = document.getElementById("myAudioPac_death");
-
-    }
+    var soundWin = document.getElementById("myAudioPac_win");
 
     var world =[
         [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
@@ -247,35 +242,37 @@ $(document).ready(function(){
 
     var ghost1;
     $("#pacMangameButton").click(function(){
-        gameStatus = "on";
-        document.getElementById('pacMangameButton').style.visibility = "hidden";
-        world =[
-            [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-            [2,0,1,1,1,1,1,1,1,2,1,1,1,1,1,1,4,1,1,1,1,1,2],
-            [2,1,2,1,1,2,2,1,1,2,2,2,2,1,2,2,1,2,1,2,2,1,2],
-            [2,1,1,2,2,2,1,1,2,1,1,1,1,1,1,2,1,1,1,1,1,2,2],
-            [2,1,1,1,1,1,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
-            [2,1,2,1,1,1,2,2,1,1,1,1,1,1,2,1,4,1,2,2,1,1,2],
-            [2,1,2,2,2,2,2,1,1,2,2,1,2,2,2,1,1,1,2,2,1,2,2],
-            [2,1,1,2,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,2],
-            [2,1,4,2,1,1,1,1,1,2,1,1,2,1,1,1,1,2,2,2,1,4,2],
-            [2,1,1,2,1,2,2,1,1,2,2,1,2,4,1,1,2,2,1,1,1,1,2],
-            [2,1,1,1,1,2,2,1,1,2,1,1,2,1,2,1,2,1,1,2,2,1,2],
-            [2,1,1,1,1,1,1,1,4,1,1,1,2,1,1,1,1,1,4,2,1,1,2],
-            [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
-        ];
-        defaultSound();
-        displayWorld();
-        defaultPacman1();
-        document.getElementById(pacman1.gameover).style.visibility = "hidden";
-        displayPacman(pacman1);
-        displayScore();
-        displayLife();
-        defaultR_ghost();
-        displayGhosts();
-        ghost1 = setInterval( () =>{moveGhost(r_ghost);}, 400);
-        ghost2 = setInterval( () =>{moveGhost(y_ghost);}, 400);
-        ghost3 = setInterval( () =>{moveGhost(g_ghost);}, 400);
+        soundStart.play();
+        setTimeout(function () {
+            gameStatus = "on";
+            document.getElementById('pacMangameButton').style.visibility = "hidden";
+            world =[
+                [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+                [2,0,1,1,1,1,1,1,1,2,1,1,1,1,1,1,4,1,1,1,1,1,2],
+                [2,1,2,1,1,2,2,1,1,2,2,2,2,1,2,2,1,2,1,2,2,1,2],
+                [2,1,1,2,2,2,1,1,2,1,1,1,1,1,1,2,1,1,1,1,1,2,2],
+                [2,1,1,1,1,1,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+                [2,1,2,1,1,1,2,2,1,1,1,1,1,1,2,1,4,1,2,2,1,1,2],
+                [2,1,2,2,2,2,2,1,1,2,2,1,2,2,2,1,1,1,2,2,1,2,2],
+                [2,1,1,2,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,2],
+                [2,1,4,2,1,1,1,1,1,2,1,1,2,1,1,1,1,2,2,2,1,4,2],
+                [2,1,1,2,1,2,2,1,1,2,2,1,2,4,1,1,2,2,1,1,1,1,2],
+                [2,1,1,1,1,2,2,1,1,2,1,1,2,1,2,1,2,1,1,2,2,1,2],
+                [2,1,1,1,1,1,1,1,4,1,1,1,2,1,1,1,1,1,4,2,1,1,2],
+                [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
+            ];
+            displayWorld();
+            defaultPacman1();
+            document.getElementById(pacman1.gameover).style.visibility = "hidden";
+            displayPacman(pacman1);
+            displayScore();
+            displayLife();
+            defaultR_ghost();
+            displayGhosts();
+            ghost1 = setInterval( () =>{moveGhost(r_ghost);}, 400);
+            ghost2 = setInterval( () =>{moveGhost(y_ghost);}, 400);
+            ghost3 = setInterval( () =>{moveGhost(g_ghost);}, 400);
+        }, 4000);
     });
 
     function gameOver(){
@@ -296,6 +293,7 @@ $(document).ready(function(){
                 document.getElementById(pacman1.gameover).innerHTML = "You've Won!";
                 document.getElementById(pacman1.gameover).style.visibility = "visible";
                 displayPacman(pacman1);
+                soundWin.play();
             }
             displayPacman(pacman1);
         }
