@@ -91,6 +91,7 @@ body {
                     position: relative;
                     display: none;
                 }
+                
     #aboutMe{
         width: 1120px;
         margin-left: 40px;
@@ -165,3 +166,7 @@ body {
             display:inline-block;
             vertical-align: top;
         }
+            #bodyTwoParagraph p{
+                color: white;
+                margin: 0px;
+            }
