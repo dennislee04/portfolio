@@ -174,4 +174,5 @@ body {
             #bodyTwoParagraph p{
                 color: white;
                 margin: 0px;
+                display:block;
             }
