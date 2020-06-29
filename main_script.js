@@ -24,4 +24,5 @@ $(document).ready(function(){
             $(this).attr("src", "img/snowboarding_mountain.jpg");
         }
     );
+
 });

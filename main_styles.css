@@ -1,6 +1,25 @@
 * {
     font-family: 'Open Sans', sans-serif;
 }
+#sidenav{
+    width: 45px;
+    width: 45px;
+    height: 180px;
+    margin-top: 70px;
+    margin-left: 2px;
+    background-color: grey;
+    border: 2px solid black;
+    position: fixed;
+}
+    #sidenav a{
+        margin: 2px;
+        display: block;
+    }
+        #sidenav img{
+            width: 40px;
+            height: 40px;
+        }
+
 body {
     /* background-color: black; */
     margin: 0px;
@@ -10,7 +29,6 @@ body {
     background-image: linear-gradient(to right, #202020,#282828,#303030,#383838,#404040, #484848,#505050); 
     width: 1200px;
     height: 1500px;
-    /* height: 825px; */
     margin: 0px;
 }
 #header{
@@ -25,7 +43,7 @@ body {
         color: white;
         width: 145px;
         height: 45px;
-        margin-left: 40px;
+        margin-left: 70px;
         text-shadow: 2px 2px black;
     }
     #aboutLinks{
@@ -57,7 +75,7 @@ body {
     }
         #display{
             margin-top: 10px;
-            margin-left: 40px;
+            margin-left: 70px;
             width: 120px;
             height: 145px;
             display: inline-block;
