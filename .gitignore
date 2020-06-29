@@ -1,2 +1,5 @@
 # ignores a directory /pacMan/img/
 /pacMan/img/
+
+# ignores a directory /docs/Dennis_Resume_6-2-2020-actual.pdf
+/docs/Dennis_Resume_6-2-2020-actual.pdf

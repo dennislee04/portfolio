@@ -3,10 +3,15 @@ $(document).ready(function(){
     var gameStatus = "off";
 
     var soundStart = document.getElementById("myAudioPac_start");
+    soundStart.volume = 0.2;
     var soundChomp = document.getElementById("myAudioPac_chomp");
+    soundChomp.volume = 0.2;
     var soundFruit = document.getElementById("myAudioPac_fruit");
+    soundFruit .volume = 0.2;
     var soundDeath = document.getElementById("myAudioPac_death");
+    soundDeath.volume = 0.2;
     var soundWin = document.getElementById("myAudioPac_win");
+    soundWin.volume = 0.2;
 
     var world =[
         [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
