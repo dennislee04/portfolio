@@ -128,14 +128,11 @@ $(document).ready(function(){
             soundDeath.play();
             if (pacman.life > 1){
                 pacman.life--;
-                alert("You've hit the Ghost and a lost PacMan Life. You'll now have " + pacman.life + " lives left. Are you ready?");
+                alert("You've hit a Ghost and have lost a PacMan Life. Lives remaining: " + pacman.life + " . Are you ready?");
             }
-            if (pacman.life == 1){
+            else if (pacman.life == 1){
                 pacman.life--;
-                alert("You've hit the Ghost and have " + pacman.life + " life left.");
-            }
-            else if (pacman.life == 0){
-                alert("You've hit the Ghost and have " + pacman.life + " lives left.");
+                alert("You've hit a Ghost, lost a PacMan Life and have " + pacman.life + " lives remaining...");
             }
             pacman.x = 4;
             pacman.y = 40;
