@@ -132,8 +132,10 @@ $(document).ready(function(){
             }
             else if (pacman.life == 1){
                 pacman.life--;
-                alert("You've hit the Ghost and have " + pacman.life + " lives left.");
+                alert("You've hit the Ghost and have " + pacman.life + " live left.");
             }
+            else if (pacman.life == 0){
+                alert("You've hit the Ghost and have " + pacman.life + " lives left.");
             pacman.x = 4;
             pacman.y = 40;
             displayPacman(pacman);
