@@ -126,13 +126,13 @@ $(document).ready(function(){
             displayGhosts();
             displayPacman(pacman);
             soundDeath.play();
-            if (pacman.life != 0){
+            if (pacman.life > 1){
                 pacman.life--;
                 alert("You've hit the Ghost and a lost PacMan Life. You'll now have " + pacman.life + " lives left. Are you ready?");
             }
-            else if (pacman.life == 1){
+            if (pacman.life == 1){
                 pacman.life--;
-                alert("You've hit the Ghost and have " + pacman.life + " live left.");
+                alert("You've hit the Ghost and have " + pacman.life + " life left.");
             }
             else if (pacman.life == 0){
                 alert("You've hit the Ghost and have " + pacman.life + " lives left.");
