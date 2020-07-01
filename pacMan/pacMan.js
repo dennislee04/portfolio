@@ -12,6 +12,8 @@ $(document).ready(function(){
     soundDeath.volume = 0.2;
     var soundWin = document.getElementById("myAudioPac_win");
     soundWin.volume = 0.2;
+    var soundLose = document.getElementById("myAudioPac_lose");
+    soundLose.volume = 0.2;
 
     var world =[
         [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
@@ -132,7 +134,8 @@ $(document).ready(function(){
             }
             else if (pacman.life == 1){
                 pacman.life--;
-                alert("You've hit a Ghost, lost a PacMan Life and have " + pacman.life + " lives remaining...");
+                soundLose.play();
+                alert("You have " + pacman.life + " lives remaining... You've lost...");
             }
             pacman.x = 4;
             pacman.y = 40;
