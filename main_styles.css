@@ -164,6 +164,7 @@ body {
                     .pContent a{
                         text-decoration: none;
                         text-shadow: 0px 0px;
+                        color: red;
                     }
     
     #bodyTwo{
