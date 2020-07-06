@@ -25,4 +25,16 @@ $(document).ready(function(){
         }
     );
 
+    $("#topIcon").hover(
+        function() {
+            $("#topButtonMessage").css("visibility", "visible");
+            $("#topButtonMessage").css("width", "10px");
+            $("#topButtonMessage").css("height", "10px");
+        }, function() {
+            $("#topButtonMessage").css("visibility", "hidden");
+            $("#topButtonMessage").css("width", "0px");
+            $("#topButtonMessage").css("height", "0px");
+        }
+    );
+
 });

@@ -15,6 +15,15 @@
         margin: 2px;
         display: block;
     }
+        #topButtonMessage{
+            visibility: hidden;
+            margin: 0px;
+            margin-top: -4px;
+            position: fixed;
+            font-weight: bold;
+            color: white;
+            font-size: 10pt;
+        }
         #sidenav img{
             width: 40px;
             height: 40px;
