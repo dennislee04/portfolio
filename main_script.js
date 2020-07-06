@@ -37,4 +37,13 @@ $(document).ready(function(){
         }
     );
 
+    $("#sidenav a").hover(
+        function() {
+            $(this).css("background-color", "#484848");
+
+        }, function() {
+            $(this).css("background-color", "");
+        }
+    );
+
 });
