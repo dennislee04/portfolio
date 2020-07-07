@@ -19,7 +19,7 @@ $(document).ready(function(){
 
     $("#snowboard").hover(
         function() {
-            $(this).attr("src", "img/snowboarding_mountain2.jpg");
+            $(this).attr("src", "img/snowboarding_mountain2.jpeg");
         }, function() {
             $(this).attr("src", "img/snowboarding_mountain.jpg");
         }
