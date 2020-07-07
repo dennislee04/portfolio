@@ -39,12 +39,12 @@
 
 body {
     margin: 0px;
-}
-#wrapper{
-    /* background-image: linear-gradient(to right, #202020,#282828,#303030,#383838,#404040, #484848,#505050);  */
     background-image: url(img/background1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+#wrapper{
+    /* background-image: linear-gradient(to right, #202020,#282828,#303030,#383838,#404040, #484848,#505050);  */
     width: 1200px;
     height: 1500px;
     margin: 0px;
