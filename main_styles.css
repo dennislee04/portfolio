@@ -7,7 +7,7 @@
     margin-top: 72px;
     margin-left: 2px;
     /* background-color: grey; */
-    border: 1px solid white;
+    /* border: 1px solid white; */
     position: fixed;
     border-radius: 15px 50px; 
 }
@@ -53,7 +53,7 @@ body {
     width: 1200px;
     height: 70px;
     display: block;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
 }
     #header h1{
         display: inline-block;
