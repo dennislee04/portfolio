@@ -3,7 +3,7 @@
 }
 #sidenav{
     width: 45px;
-    height: 238px;
+    height: 282px;
     margin-top: 70px;
     margin-left: 2px;
     background-color: grey;
@@ -177,6 +177,8 @@ body {
                     width: 320px;
                     text-shadow: 2px 2px black;
                     margin-left: 25px;
+                    font-size: 10pt;
+                    margin-top: 0px;
                 }
                     .pContent a{
                         text-decoration: none;
@@ -189,7 +191,6 @@ body {
         height: 465px;
         display: block;
         margin-left: 40px;
-        /* background-color: green; */
         padding-left: 18px;
         padding-top: 8px;
     }
