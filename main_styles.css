@@ -46,7 +46,7 @@ body {
 #wrapper{
     /* background-image: linear-gradient(to right, #202020,#282828,#303030,#383838,#404040, #484848,#505050);  */
     width: 1200px;
-    height: 1500px;
+    height: 1900px;
     margin: 0px;
 }
 #header{
@@ -82,7 +82,7 @@ body {
         }
 #body{
     width: 1200px;
-    height: 1400px;
+    height: 1800px;
     display:block;
 }
     #bodyOne{
@@ -227,3 +227,9 @@ body {
                 text-decoration: none;
                 color: red;
             }
+	
+	#projects {
+		/* background: white; */
+		margin: 490px 0px 0px 20px;
+		height: 600px;
+	}
